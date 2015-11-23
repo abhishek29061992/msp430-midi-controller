@@ -1,10 +1,10 @@
 # msp430-midi-controller
 
-A code example for MSP430 series microcontroller (MSP430G2553) that uses an ultrasonic sensor (HC-SR04) and a potentiometer (foot pedal in this case) to send signals for MIDI control.
+A code example for MSP430 series microcontroller (MSP430G2553) that uses an ultrasonic sensor (HC-SR04), a potentiometer (foot pedal in this case) to send signals for MIDI control, and a 32 keys presure insenstive toy keyboard (Casio SA-38).
 
 # introduction
 
-MIDI controllers can be awfully expensive. This code gives you the flexibility of designing your own MIDI controller using potentiometers and demonstrates the ability to use other devices, eg. an ultrasonic sensors, capacitive touches, joysticks, and variety of other sensors, as MIDI controllers.
+MIDI controllers can be awfully expensive. This code gives you the flexibility of designing your own MIDI controller using  keys, potentiometers (foot pedals, joystics, knobs etc.) and an ultrasonic sensor.
 
 # working
 
@@ -18,6 +18,6 @@ The Ultrasonic sensor detects the distance of the hand or obstacle and according
 # UART to MIDI
 there are 2 options here:
 
-1. Use the MSP430Launchpad (that has the FTDI chip integrated) to connect to the system as virtual COM over USB and then use 'Hairless MIDI Serial Bridge'(http://projectgus.github.io/hairless-midiserial/) at 9600 baud to forward the MIDI data to a virtual driver like 'LoopBe1' (http://www.nerds.de/en/loopbe1.html). You can then receive this data from your virtual  port in your DAW.
+1. Use the MSP430Launchpad (that has the FTDI chip integrated) to connect to the system as virtual COM over USB and then use 'Hairless MIDI Serial Bridge'(http://projectgus.github.io/hairless-midiserial/) at 9600 baud to forward the MIDI data to a virtual driver like 'LoopBe1' (http://www.nerds.de/en/loopbe1.html). The MIDI data can then be received from this virtual  port into the DAW.
 
 2. Use a MIDI-to-USB converter cable and connect the MIDI Female Connector to the UART Tx Pins and GND according to the pinout (refer other ources from internet). Use opto-couplers or voltage level buffers (eg. IC 4050), if needed. There weren't needed in my case. Also, set the UART Baud to 31250 for the microcontroller (see code).
