@@ -15,6 +15,9 @@ Further, to match it to give full scale output of MIDI control (from 0 to 127), 
 
 The Ultrasonic sensor detects the distance of the hand or obstacle and accordingly sends the MIDI control signal. It's upper and lower threshold distances can be changed in the code, or a method similar to calibration of the foot pedal can be deployed here also.
 
+![alt tag](https://raw.github.com/abhishek29061992/msp430-midi-controller/blob/master/midi-controller.png)
+![alt tag](https://raw.github.com/abhishek29061992/msp430-midi-controller/blob/master/New-Project-(1).png)
+
 # UART to MIDI
 there are 2 options here:
 
